@@ -1,0 +1,23 @@
+{
+  "name": "central_da_copa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gabriel-Uchoa/Central_da_Copa.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gabriel-Uchoa/Central_da_Copa/issues"
+  },
+  "homepage": "https://github.com/Gabriel-Uchoa/Central_da_Copa#readme",
+  "devDependencies": {
+    "typescript": "^4.9.4"
+  }
+}
