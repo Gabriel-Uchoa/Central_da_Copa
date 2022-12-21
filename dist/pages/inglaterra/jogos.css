@@ -1,0 +1,83 @@
+body {
+    background-color: #EEEEEE;
+}
+
+.content {
+    text-align: center;
+}
+
+.team-navigation {
+    height: 40vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+}
+
+.current-team {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: black;
+}
+
+.flag-team {
+    height: 30vh;
+}
+
+.flag-team img {
+    height: 100%;
+}
+
+.team-details {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.button-style {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    color: white;
+    text-decoration: none;
+    background-color: #042940;
+}
+
+.button-style:hover {
+    background-color: #0d5d8f;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
+}
+
+.match-history {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.qualifying-matches{
+    width: 80vw;
+    height: 200px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.grid-result-qualifyng{
+    display: grid;
+    height: 100px;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    overflow: hidden;
+    margin: 10px 0px;
+}
+.card-result-qualifyng{
+    display: flex;
+    flex-direction: column;
+    height: 100px;
+    justify-content: center;
+    font-size: xx-large;
+    background-color: #DEDEDE;
+}
