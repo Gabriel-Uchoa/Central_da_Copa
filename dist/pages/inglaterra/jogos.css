@@ -55,25 +55,29 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 20px 0px;
 }
-.qualifying-matches{
+
+.match {
     width: 80vw;
-    height: 200px;
     padding: 20px;
     border-radius: 20px;
+    margin: 20px 0px;
     background-color: white;
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
-.grid-result-qualifyng{
+.grid-result-qualifyng {
     display: grid;
     height: 100px;
+    transition: 0.3s;
     grid-template-columns: 1fr 1fr;
     grid-gap: 10px;
     overflow: hidden;
     margin: 10px 0px;
 }
-.card-result-qualifyng{
+
+.card {
     display: flex;
     flex-direction: column;
     height: 100px;
@@ -81,3 +85,5 @@ body {
     font-size: xx-large;
     background-color: #DEDEDE;
 }
+
+
