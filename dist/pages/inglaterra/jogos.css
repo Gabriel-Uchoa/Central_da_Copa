@@ -2,6 +2,9 @@ body {
     background-color: #EEEEEE;
 }
 
+.contentJogos{
+    text-align: center;
+}
 
 .team-navigation {
     height: 40vh;

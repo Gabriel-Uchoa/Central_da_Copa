@@ -82,11 +82,12 @@ function filterAge() {
     filter.push(filter_age_max.value);
     loadApiJogadores().then((data) => processApiJogadores(data, filter));
 }
-const button = document.getElementById('slide');
-function slideMoveRight() {
-    button.scrollLeft += 50;
+function slideMoveRight(id) {
+    const element = document.getElementById(id);
+    element.scrollLeft += 50;
 }
-function slideMoveLeft() {
-    button.scrollLeft -= 50;
+function slideMoveLeft(id) {
+    const element = document.getElementById(id);
+    element.scrollLeft -= 50;
 }
 //# sourceMappingURL=inglaterra_jogadores.js.map

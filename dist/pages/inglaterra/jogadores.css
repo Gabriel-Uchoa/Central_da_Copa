@@ -49,3 +49,25 @@
 .card-carousel img {
     height: 100px;
 }
+
+.sec-carousel {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.button{
+    cursor: pointer;
+    opacity: 0.5;
+}
+.button:hover{
+    opacity: 1;
+}
+
+.control {
+    position: absolute;
+    display: flex;
+    width: 80vw;
+    align-items: center;
+    justify-content: space-between;
+}
