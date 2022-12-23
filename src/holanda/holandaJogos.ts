@@ -1,12 +1,3 @@
-// class Games {
-//     timeA!: string;
-//     timeB!: string;
-//     data!: string;
-//     golsA!: number;
-//     golsB!: number;
-//     fase!: string;
-// }
-
 let team = 'Holanda'
 const btn = document.querySelector('.btnMost')
 
