@@ -90,12 +90,12 @@ function filterAge() {
     loadApiJogadores().then((data: Array<jogadores>) => processApiJogadores(data, filter))
 }
 
-const button: any = document.getElementById('slide');
-
-function slideMoveRight() {
-    button.scrollLeft += 50;
+function slideMoveRight(id: string) {
+    const element: any = document.getElementById(id)
+    element.scrollLeft += 50;
 }
 
-function slideMoveLeft() {
-    button.scrollLeft -= 50;
+function slideMoveLeft(id: string) {
+    const element: any = document.getElementById(id)
+    element.scrollLeft -= 50;
 }
