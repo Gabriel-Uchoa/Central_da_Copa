@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro</title>
     <link rel="stylesheet" href="styles/components.css">
+    <link rel="stylesheet" href="./styles/cadastro.css">
 </head>
+
 <body>
     <section class="nav-bar">
         <section>
@@ -18,8 +21,44 @@
             <a class="nav-options" href="./cadastro.html">Cadastar</a>
         </section>
     </section>
-    <section>
-        
+    <section class="content">
+        <form class="forms">
+            <div class="title">
+                <h2>Cadastre um Jogador</h2>
+            </div>
+            <div>
+                <label for="name">Nome:</label>
+                <input class="styleInput" id="name" placeholder="Joaquim Oliveira" />
+            </div>
+            <div>
+                <label for="team">Time:</label>
+                <select class="styleInput" id="team" name="team">
+                    <option value="valor1">Inglaterra</option>
+                    <option value="valor2">Holanda</option>
+                    <option value="valor3">Marrocos</option>
+                </select>
+            </div>
+            <div>
+                <label for="position">Posição:</label>
+                <select class="styleInput" id="position" name="position">
+                    <option value="valor1">Goleiro</option>
+                    <option value="valor2">Defensor</option>
+                    <option value="valor3">Meio Campista</option>
+                    <option value="valor3">Atacante</option>
+                </select>
+            </div>
+            <div>
+                <label for="age">Idade:</label>
+                <input type="number" class="styleInput" id="age" min="0" />
+            </div>
+            <div>
+                <label for="url_image">URL Imagem:</label>
+                <input class="styleInput" id="url_image" />
+            </div>
+            <div>
+                <input id="submit" value="Cadastrar">
+            </div>
+        </form>
     </section>
     <section class="footer">
         <div>
@@ -27,4 +66,5 @@
         </div>
     </section>
 </body>
+
 </html>
