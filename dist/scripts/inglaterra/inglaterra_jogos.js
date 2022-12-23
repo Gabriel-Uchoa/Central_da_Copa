@@ -29,6 +29,7 @@ function viewExpand() {
     }
 }
 function createElement(element) {
+    //refatorar função
     const parentElement = document.getElementById(element.fase);
     if (element.fase == "Classificatória") {
         let theFirstChild = parentElement.firstChild;
@@ -56,4 +57,4 @@ function loadElements() {
     loadApiJogos().then((data) => processApi(data));
 }
 btnView === null || btnView === void 0 ? void 0 : btnView.addEventListener('click', viewExpand);
-//# sourceMappingURL=inglaterra.js.map
+//# sourceMappingURL=inglaterra_jogos.js.map

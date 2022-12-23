@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/components.css">
+    <link rel="stylesheet" href="./jogos.css">
+    <link rel="stylesheet" href="./jogadores.css">
+
+    <title>Jogadores Inglaterra</title>
+</head>
+
+<body>
+    <header class="nav-bar">
+        <div>
+            <a href="./index.html"><img class="logo" src="../../images/logo.png"></a>
+        </div>
+        <nav class="nav-routes">
+            <a class="nav-options" href="./index.html">Home</a>
+            <a class="nav-options" href="">Jogos</a>
+            <a class="nav-options" href="./cadastro.html">Cadastar</a>
+        </nav>
+    </header>
+    <main class="content">
+        <section class="team-navigation">
+            <div class="current-team">
+                <div class="flag-team">
+                    <img src="https://upload.wikimedia.org/wikipedia/pt/2/2e/England_crest_2009.svg.png"
+                        alt="flag England">
+                </div>
+                <div class="team-details">
+                    <h1>Inglaterra</h1>
+                </div>
+            </div>
+        </section>
+        <section class="players-filter">
+            <h3>Filtrar por idade</h3>
+            <div class="filter">
+                <label>
+                    Idade Mínima
+                    <br>
+                    <input onfocusout="filterAge()" id="age_min" type="number" min="0" value="0">
+                </label>
+                <label>
+                    Idade Máxima
+                    <br>
+                    <input onfocusout="filterAge()" id="age_max" type="number" min="0" value="0">
+                </label>
+            </div>
+        </section>
+        <section class="carousel">
+            <div id="goleiros" class="sec-carousel">
+                <h1>Goleiros</h1>
+                <button onclick={slideMoveRight()} id="direita">Right</button>
+                <button onclick={slideMoveLeft()} id="esquerda">Left</button>
+                <div id="slideGoleiros" class="carouselCards"></div>
+            </div>
+            <div id="defensores" class="sec-carousel">
+                <h1>Defensores</h1>
+                <button onclick={slideMoveRight()} id="direita">Right</button>
+                <button onclick={slideMoveLeft()} id="esquerda">Left</button>
+                <div id="slideDefensores" class="carouselCards"></div>
+            </div>
+            <div id="meioCampistas" class="sec-carousel">
+                <h1>Meio Campistas</h1>
+                <button onclick={slideMoveRight()} id="direita">Right</button>
+                <button onclick={slideMoveLeft()} id="esquerda">Left</button>
+                <div id="slideMeioCampistas" class="carouselCards"></div>
+            </div>
+            <div id="atacantes" class="sec-carousel">
+                <h1>Atacantes</h1>
+                <button onclick={slideMoveRight()} id="direita">Right</button>
+                <button onclick={slideMoveLeft()} id="esquerda">Left</button>
+                <div id="slideAtacantes" class="carouselCards"></div>
+            </div>
+        </section>
+    </main>
+    <script src="../../scripts/inglaterra/inglaterra_jogadores.js"></script>
+</body>
+
+</html>
