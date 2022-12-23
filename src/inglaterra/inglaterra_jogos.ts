@@ -26,6 +26,7 @@ function processApi(data: Array<jogos>) {
         }
     });
 }
+
 function viewExpand() {
     const divExpand: any = document.getElementById("Classificatória")
     if (btnView.innerText == "Ver Mais") {
@@ -36,8 +37,8 @@ function viewExpand() {
         btnView.innerText = "Ver Mais"
     }
 }
-
 function createElement(element: jogos) {
+    //refatorar função
     const parentElement: any = document.getElementById(element.fase)
     if (element.fase == "Classificatória") {
         let theFirstChild = parentElement.firstChild
