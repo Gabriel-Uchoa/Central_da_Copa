@@ -54,7 +54,7 @@ function createElementJogadores(element: jogadores) {
         const parentElement: any = document.getElementById("slideGoleiros")
         create(parentElement)
     }
-    if (element.position == "defensores") {
+    if (element.position == "defensor") {
         const parentElement: any = document.getElementById("slideDefensores")
         create(parentElement)
     }
