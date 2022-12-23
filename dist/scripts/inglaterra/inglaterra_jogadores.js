@@ -49,7 +49,7 @@ function createElementJogadores(element) {
         const parentElement = document.getElementById("slideGoleiros");
         create(parentElement);
     }
-    if (element.position == "defensores") {
+    if (element.position == "defensor") {
         const parentElement = document.getElementById("slideDefensores");
         create(parentElement);
     }
