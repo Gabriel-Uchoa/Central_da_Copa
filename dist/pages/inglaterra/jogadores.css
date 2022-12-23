@@ -56,11 +56,12 @@
     justify-content: center;
 }
 
-.button{
+.button {
     cursor: pointer;
     opacity: 0.5;
 }
-.button:hover{
+
+.button:hover {
     opacity: 1;
 }
 
@@ -70,4 +71,10 @@
     width: 80vw;
     align-items: center;
     justify-content: space-between;
+}
+
+@media (max-width: 500px) {
+    .filter{
+       flex-direction: column;
+    }
 }

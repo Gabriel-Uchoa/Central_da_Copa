@@ -2,7 +2,7 @@ body {
     background-color: #EEEEEE;
 }
 
-.contentJogos{
+.contentJogos {
     text-align: center;
 }
 
@@ -38,8 +38,16 @@ body {
     flex-direction: column;
     height: 100px;
     justify-content: center;
-    font-size: xx-large;
+    font-size: x-large;
     background-color: #DEDEDE;
 }
 
-
+@media (max-width: 900px) {
+    .grid-result-qualifyng {
+        display: flex;
+        flex-direction: column;
+    }
+    .card{
+        font-size: large;
+    }
+}
