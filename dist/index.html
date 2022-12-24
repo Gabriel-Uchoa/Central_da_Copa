@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,31 +8,41 @@
     <title>Home</title>
     <link rel="stylesheet" href="styles/components.css">
 </head>
+
 <body>
     <section class="nav-bar">
-        <section>
+        <section class="icons">
             <a href="./index.html"><img class="logo" src="./images/logo.png"></a>
+            <label class='menu-button-container' for="menu-toggle">
+                <div class='menu-button'></div>
+            </label>
         </section>
-        <section class="nav-routes">
+        <input id="menu-toggle" type="checkbox" />
+        <section class="nav-routes menu">
             <a class="nav-options" href="./index.html">Home</a>
-            <a class="nav-options" href="">Jogos</a>
-            <a class="nav-options" href="./cadastro.html">Cadastar</a>
+            <a class="nav-options" href="./pages/inglaterra/jogos.html">Jogos</a>
+            <a class="nav-options" href="./cadastro.html">Cadastrar</a>
         </section>
     </section>
     <section class="flag">
         <div class="teams">
-            <a href="../dist/pages/inglaterra/inglaterra.html"><img src="https://static.todamateria.com.br/upload/ba/nd/bandeira_da_inglaterra_bb.jpg" width="90" alt="Inglaterra"></a>
+            <a href="./pages/inglaterra/jogos.html"><img
+                    src="https://static.todamateria.com.br/upload/ba/nd/bandeira_da_inglaterra_bb.jpg" width="90"
+                    alt="Inglaterra"></a>
             <p class="name">INGLATERRA</p>
         </div>
         <div class="teams">
-            <a href="../src/holanda/pageJogos.html"><img src="https://www.holandaevoce.nl/binaries/medium/content/gallery/nl-netherlandsandyou/content-afbeeldingen/vlag-nederland.png" width="80" alt="Holanda"></a>
+            <a href="./pages/holanda/pageJogos.html"><img
+                    src="https://www.holandaevoce.nl/binaries/medium/content/gallery/nl-netherlandsandyou/content-afbeeldingen/vlag-nederland.png"
+                    width="80" alt="Holanda"></a>
             <p class="name">HOLANDA</p>
         </div>
         <div class="teams">
-            <a href=""><img src="https://s3.static.brasilescola.uol.com.br/be/2022/11/bandeira-do-marrocos.jpg" width="80" alt="Marrocos"></a>
+            <a href=""><img src="https://s3.static.brasilescola.uol.com.br/be/2022/11/bandeira-do-marrocos.jpg"
+                    width="80" alt="Marrocos"></a>
             <p class="name">MARROCOS</p>
         </div>
-        
+
     </section>
     <section class="footer">
         <div>
@@ -39,4 +50,5 @@
         </div>
     </section>
 </body>
+
 </html>
