@@ -13,12 +13,16 @@
 
 <body>
     <header class="nav-bar">
-        <div>
+        <section class="icons">
             <a href="./index.html"><img class="logo" src="../../images/logo.png"></a>
-        </div>
-        <nav class="nav-routes">
+            <label class='menu-button-container' for="menu-toggle">
+                <div class='menu-button'></div>
+            </label>
+        </section>
+        <input id="menu-toggle" type="checkbox" />
+        <nav class="nav-routes menu">
             <a class="nav-options" href="../../index.html">Home</a>
-            <a class="nav-options" href="">Jogos</a>
+            <a class="nav-options" href="./jogos.html">Jogos</a>
             <a class="nav-options" href="../../cadastro.html">Cadastar</a>
         </nav>
     </header>
@@ -38,7 +42,7 @@
                 </div>
             </div>
             <div class="next-team">
-                <a class="button-style" href="#">Próximo</a>
+                <a class="button-style" href="../holanda/pageJogos.html">Próximo</a>
             </div>
         </section>
 
