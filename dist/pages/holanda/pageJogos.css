@@ -146,6 +146,28 @@ img {
     .menu {
         display: flex;
         flex-direction: column;
+        text-align: center;
+    }
+    .menu img{
+        
+        margin: 2vh auto;
+    }
+    /* .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    } */
+    .buttonNext {
+        margin: 0 auto;
+    }
+
+    .btns {
+        font-size: 2vh;
+        width: 15vw;
+        height: 2vh;
+        padding: 0.5rem;
+        margin-top: 1vh;
     }
 }
 
