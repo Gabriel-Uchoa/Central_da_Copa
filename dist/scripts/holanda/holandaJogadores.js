@@ -53,4 +53,14 @@ async function creatElement(element, team) {
         document.querySelector(".goalkeepers").appendChild(div);
     }
 }
+function moveLeft(id) {
+    console.log('entrou');
+    let element = document.getElementById(id);
+    element.scrollLeft -= 400;
+}
+function moveRight(id) {
+    console.log('entrou direita');
+    let element = document.getElementById(id);
+    element.scrollLeft += 400;
+}
 //# sourceMappingURL=holandaJogadores.js.map

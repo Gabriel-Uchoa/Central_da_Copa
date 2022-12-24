@@ -15,7 +15,7 @@ async function searchPLayers() {
 
 
 async function searchPLayersTeam(players: object, team: string) {
-    
+
     players.forEach(element => {
         if (element.team === team) {
             console.log(element)
@@ -24,7 +24,7 @@ async function searchPLayersTeam(players: object, team: string) {
     });
 }
 
-async function creatElement(element: object, team:string) {
+async function creatElement(element: object, team: string) {
     if (element.position === 'atacante' && element.team === team) {
 
         let div = document.createElement('div');
@@ -47,7 +47,7 @@ async function creatElement(element: object, team:string) {
 
     }
 
-    if (element.position === 'defensor' && element.team === team){
+    if (element.position === 'defensor' && element.team === team) {
         let div = document.createElement('div');
         div.className = 'player'
         div.appendChild(document.createElement('img')).src = `${element.url}`;
@@ -57,7 +57,7 @@ async function creatElement(element: object, team:string) {
         document.querySelector(".defenders").appendChild(div);
     }
 
-    if (element.position === 'goleiro' && element.team === team){
+    if (element.position === 'goleiro' && element.team === team) {
         let div = document.createElement('div');
         div.className = 'player'
         div.appendChild(document.createElement('img')).src = `${element.url}`;
@@ -65,5 +65,17 @@ async function creatElement(element: object, team:string) {
         div.appendChild(document.createElement('p')).innerText = `${element.age} anos`;
 
         document.querySelector(".goalkeepers").appendChild(div);
-    } 
+    }
+}
+
+function moveLeft(id: string) {
+    console.log('entrou')
+    let element: any = document.getElementById(id)
+    element.scrollLeft -= 400;
+}
+
+function moveRight(id: string) {
+    console.log('entrou direita')
+    let element: any = document.getElementById(id)
+    element.scrollLeft += 400;
 }
