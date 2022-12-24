@@ -88,30 +88,22 @@ body {
     gap: 1vw;
     overflow-x: auto;
 }
+
 .position::-webkit-scrollbar{
     display: none;
 }
 
-.left, .right{
-    padding: 1rem;
-    border: none;
-    cursor: pointer;
-    color: black;
-    border-radius: 1rem;
-    font-size: 3vh;
-    border: none;   
-    background: linear-gradient(transparent 0%, black 200%);
-    opacity: 0.1;
-    transition: all 600ms ease-in-out;
+.arrows {
+    position: absolute;
+    display: flex;
+    width: 60vw;
+    justify-content: space-between;
+    margin-top: 12vh;
+    color: white;
 }
-.left:hover, 
-.right:hover
-{
-    opacity: 1;
-}
-
-.right {
-   margin-left: 55vw;
+.arrowRight, .arrowLeft{
+   width: 3vw;
+   cursor: pointer;
 }
 
 .player{
@@ -124,5 +116,5 @@ body {
 }
 
 .player img{
-   height: 90px;
+   height: 85px;
 }
