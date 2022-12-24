@@ -42,11 +42,11 @@ function creatElement(element) {
 function divExpand() {
     const expand = document.querySelector(".gamesClassificatory");
     if (btn.innerText === "Ver Mais") {
-        expand.style.height = 50 + 'vh';
+        expand.style.height = 75 + 'vh';
         btn.innerText = "Ver Menos";
     }
     else {
-        expand.style.height = 20 + 'vh';
+        expand.style.height = 75 - 'vh';
         btn.innerText = "Ver Mais";
     }
 }

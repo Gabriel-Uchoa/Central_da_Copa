@@ -116,5 +116,12 @@ body {
 }
 
 .player img{
-   height: 85px;
+   height: 80px;
+}
+
+@media (max-width: 1200px) {
+    .player img{
+        height: 70px;
+        max-width: 70px;
+     }
 }
