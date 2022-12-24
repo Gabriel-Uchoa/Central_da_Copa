@@ -139,5 +139,20 @@ img {
     height: 5vh;
 }
 
+@media (max-width: 900px){
+    .gamesClassificatory {
+        grid-template-columns: 1fr;
+    }
+    .menu {
+        display: flex;
+        flex-direction: column;
+        
+    }
+    /* .container {
+        display: flex;
+        flex-direction: column;
+    } */
+}
+
 
 
