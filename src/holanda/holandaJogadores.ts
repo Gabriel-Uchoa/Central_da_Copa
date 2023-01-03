@@ -24,47 +24,23 @@ async function searchPLayersTeam(players: object, team: string) {
     });
 }
 
-async function creatElement(element: object, team: string) {
+async function creatElement(element, team) {
     if (element.position === 'atacante' && element.team === team) {
-
-        let div = document.createElement('div');
-        div.className = 'player'
-        div.appendChild(document.createElement('img')).src = `${element.url}`;
-        div.appendChild(document.createElement('p')).innerText = `${element.name}`;
-        div.appendChild(document.createElement('p')).innerText = `${element.age} anos`;
-
-        document.querySelector(".attacker").appendChild(div);
+        let position = element.position
+        addPLayer(element, position)
     }
+
     if (element.position === 'meio_campista' && element.team === team) {
-
-        let div = document.createElement('div');
-        div.className = 'player'
-        div.appendChild(document.createElement('img')).src = `${element.url}`;
-        div.appendChild(document.createElement('p')).innerText = `${element.name}`;
-        div.appendChild(document.createElement('p')).innerText = `${element.age} anos`;
-
-        document.querySelector(".midfielder").appendChild(div);
-
+        let position = element.position
+        addPLayer(element, position)    
     }
-
     if (element.position === 'defensor' && element.team === team) {
-        let div = document.createElement('div');
-        div.className = 'player'
-        div.appendChild(document.createElement('img')).src = `${element.url}`;
-        div.appendChild(document.createElement('p')).innerText = `${element.name}`;
-        div.appendChild(document.createElement('p')).innerText = `${element.age} anos`;
-
-        document.querySelector(".defenders").appendChild(div);
+        let position = element.position
+        addPLayer(element, position)      
     }
-
     if (element.position === 'goleiro' && element.team === team) {
-        let div = document.createElement('div');
-        div.className = 'player'
-        div.appendChild(document.createElement('img')).src = `${element.url}`;
-        div.appendChild(document.createElement('p')).innerText = `${element.name}`;
-        div.appendChild(document.createElement('p')).innerText = `${element.age} anos`;
-
-        document.querySelector(".goalkeepers").appendChild(div);
+        let position = element.position
+        addPLayer(element, position)  
     }
 }
 
@@ -78,4 +54,26 @@ function moveRight(id: string) {
     console.log('entrou direita')
     let element: any = document.getElementById(id)
     element.scrollLeft += 400;
+}
+
+function addPLayer (element: object, position: string){
+    let div = document.createElement('div');
+    div.className = 'player';
+    div.appendChild(document.createElement('img')).src = `${element.url}`;
+    div.appendChild(document.createElement('p')).innerText = `${element.name}`;
+    div.appendChild(document.createElement('p')).innerText = `${element.age} anos`;
+
+    if(position === "atacante"){
+        document.querySelector(".attacker").appendChild(div);
+    }
+
+    if(position === "meio_campista"){
+        document.querySelector(".midfielder").appendChild(div);
+    }
+    if(position === "defensor"){
+        document.querySelector(".defenders").appendChild(div);
+    }
+    if(position === "goleiro"){
+        document.querySelector(".goalkeepers").appendChild(div);
+    }
 }
