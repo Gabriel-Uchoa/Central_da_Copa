@@ -11,33 +11,70 @@ async function searchPLayers() {
     result = await result.json();
     return result;
 }
+
+let filter = document.querySelector(".btn")
+filter.addEventListener("click", async function() {
+    let ageMin = document.querySelector("#ageMin")
+    let ageMax = document.querySelector("#ageMax")
+    let ageMinima = ageMin.value
+    let ageMaxima = ageMax.value
+   
+
+    let players = await searchPLayers()
+    clearDivs()
+    filterPLayers(players, team, ageMinima, ageMaxima)
+
+})
+
+function clearDivs(){
+    let div = document.querySelector(".player")
+    for (let i = 0; i < div.length; i++) {
+        div[i].innerText = ""
+        
+    }
+}
+
+async function filterPLayers (players, team, ageMin, ageMax){
+    let filter = []
+    players.forEach(element => {
+        if(element.team === team && element.age >= ageMin && element.age <= ageMax){
+            filter.push(element)
+        }
+    })
+
+    searchPLayersTeam(filter, team)
+
+}
+
 async function searchPLayersTeam(players, team) {
     players.forEach(element => {
         if (element.team === team) {
             console.log(element);
-            creatElement(element, team);
+            creatElement(element);
         }
     });
 }
-async function creatElement(element, team) {
-    if (element.position === 'atacante' && element.team === team) {
+
+async function creatElement(element) {
+    if (element.position === 'atacante') {
         let position = element.position
         addPLayer(element, position)
     }
 
-    if (element.position === 'meio_campista' && element.team === team) {
+    if (element.position === 'meio_campista') {
         let position = element.position
         addPLayer(element, position)    
     }
-    if (element.position === 'defensor' && element.team === team) {
+    if (element.position === 'defensor') {
         let position = element.position
         addPLayer(element, position)      
     }
-    if (element.position === 'goleiro' && element.team === team) {
+    if (element.position === 'goleiro') {
         let position = element.position
         addPLayer(element, position)  
     }
 }
+
 function moveLeft(id) {
     let element = document.getElementById(id);
     element.scrollLeft -= 400;

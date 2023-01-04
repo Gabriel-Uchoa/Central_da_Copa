@@ -53,6 +53,13 @@ body {
     color: orangered;
 }
 
+.btn {
+    padding: 1vh;
+    background-color: #042940;
+    color: white;
+    cursor: pointer;
+}
+
 /* MENU TERMINA AQUI */
 
 .filter {

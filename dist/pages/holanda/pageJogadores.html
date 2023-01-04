@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <section class="nav-bar">
+    <header class="nav-bar">
         <section>
             <a href="../../dist/index.html"><img class="logo" src="../../images/logo.png"></a>
         </section>
@@ -19,7 +19,7 @@
             <a class="nav-options" href="../../pages/holanda/pageJogos.html">Jogos</a>
             <a class="nav-options" href="../../cadastro.html">Cadastar</a>
         </section>
-    </section>
+    </header>
 
     <section class="container">
         <div class="menu">
@@ -30,17 +30,18 @@
     </section>
 
     <section class="filter">Filtar por idade
-        <div class="ageMin">
+        <div class="filterAge">
             <label for="">Idade Mínima:</label>
-            <input class="field" type="text">
+            <input id="ageMin" type="number">
             <label for="">Idade Máxima:</label>
-            <input class="field" type="text">
+            <input id="ageMax" type="number">
+            <button class="btn">Filtrar</button>
         </div>
     </section>
 
-    <section class="positions">
+    <main class="positions">
 
-        <div class="title">ATACANTES</div>
+        <h2 class="title">ATACANTES</h2>
 
         <div id="attackers" class="position attacker">
             <div class="arrows">
@@ -52,7 +53,7 @@
             <!-- DIV DOS CARDS -->
         </div>
 
-        <div class="title">MEIO CAMPISTAS</div>
+        <h2 class="title">MEIO CAMPISTAS</h2>
 
         <div id="midfielders" class="position midfielder">
             <div class="arrows">
@@ -62,7 +63,8 @@
                     src="https://cdn-icons-png.flaticon.com/512/32/32213.png" width="25">
             </div>
         </div>
-        <div class="title">ZAGUEIROS</div>
+
+        <h2 class="title">ZAGUEIROS</h2>
 
         <div id="defender" class="position defenders">
             <div class="arrows">
@@ -72,7 +74,8 @@
                     src="https://cdn-icons-png.flaticon.com/512/32/32213.png" width="25">
             </div>
         </div>
-        <div class="title">GOLEIROS</div>
+
+        <h2 class="title">GOLEIROS</h2>
 
         <div id="goalkeeper"class="position goalkeepers">
             <div class="arrows">
@@ -83,7 +86,7 @@
             </div>
 
         </div>
-    </section>
+    </main>
 </body>
 
 </html>
