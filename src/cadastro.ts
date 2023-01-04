@@ -11,11 +11,11 @@ class players {
 }
 let obj: players = new players()
 
-function changeInput(element: any): any {
+function changeInput(element: any): void {
     obj[`${element.target.id}`] = element.target.value
 }
 
-function cretePlayer(e: Event): any {
+function cretePlayer(e: Event): void {
     e.preventDefault()
     if (obj.age == undefined ||
         obj.name == undefined ||
