@@ -9,7 +9,7 @@ async function loadApiJogadores() {
 }
 function processApiJogadores(data, filter) {
     if (filter) {
-        const slide = document.getElementsByClassName("carouselCards");
+        const slide = document.getElementsByClassName("carousel-cards");
         for (let i = 0; i < slide.length; i++) {
             const element = document.getElementById(slide[i].id);
             element.innerText = "";
@@ -46,30 +46,30 @@ function processApiJogadores(data, filter) {
 }
 function createElementJogadores(element) {
     if (element.position == "goleiro") {
-        const parentElement = document.getElementById("slideGoleiros");
-        create(parentElement);
+        const parentElement = document.getElementById("slide-goleiros");
+        create(parentElement, element);
     }
     if (element.position == "defensor") {
-        const parentElement = document.getElementById("slideDefensores");
-        create(parentElement);
+        const parentElement = document.getElementById("slide-defensores");
+        create(parentElement, element);
     }
     if (element.position == "meio_campista") {
-        const parentElement = document.getElementById("slideMeioCampistas");
-        create(parentElement);
+        const parentElement = document.getElementById("slidemeio-campistas");
+        create(parentElement, element);
     }
     if (element.position == "atacante") {
-        const parentElement = document.getElementById("slideAtacantes");
-        create(parentElement);
+        const parentElement = document.getElementById("slide-atacantes");
+        create(parentElement, element);
     }
-    function create(parentElement) {
-        let theLastChild = parentElement.lastChild;
-        let newElement = document.createElement("div");
-        newElement.className = 'card-carousel';
-        newElement.appendChild(document.createElement('img')).src = element.url;
-        newElement.appendChild(document.createElement('p')).innerText = element.name;
-        newElement.appendChild(document.createElement('p')).innerText = `${element.age} anos`;
-        parentElement.insertBefore(newElement, theLastChild);
-    }
+}
+function create(parentElement, jogador) {
+    let theLastChild = parentElement.lastChild;
+    let newElement = document.createElement("div");
+    newElement.className = 'card-carousel';
+    newElement.appendChild(document.createElement('img')).src = jogador.url;
+    newElement.appendChild(document.createElement('p')).innerText = jogador.name;
+    newElement.appendChild(document.createElement('p')).innerText = `${jogador.age} anos`;
+    parentElement.insertBefore(newElement, theLastChild);
 }
 function loadElementsJogadores() {
     loadApiJogadores().then((data) => processApiJogadores(data));

@@ -16,7 +16,7 @@ async function loadApiJogadores(): Promise<any> {
 
 function processApiJogadores(data: Array<jogadores>, filter?: Array<number>) {
     if (filter) {
-        const slide: any = document.getElementsByClassName("carouselCards");
+        const slide: any = document.getElementsByClassName("carousel-cards");
         for (let i = 0; i < slide.length; i++) {
             const element: any = document.getElementById(slide[i].id)
             element.innerText = "";
@@ -51,37 +51,38 @@ function processApiJogadores(data: Array<jogadores>, filter?: Array<number>) {
 
 function createElementJogadores(element: jogadores) {
     if (element.position == "goleiro") {
-        const parentElement: any = document.getElementById("slideGoleiros")
-        create(parentElement)
+        const parentElement: any = document.getElementById("slide-goleiros")
+        create(parentElement, element)
     }
     if (element.position == "defensor") {
-        const parentElement: any = document.getElementById("slideDefensores")
-        create(parentElement)
+        const parentElement: any = document.getElementById("slide-defensores")
+        create(parentElement, element)
     }
     if (element.position == "meio_campista") {
-        const parentElement: any = document.getElementById("slideMeioCampistas")
-        create(parentElement)
+        const parentElement: any = document.getElementById("slidemeio-campistas")
+        create(parentElement, element)
     }
     if (element.position == "atacante") {
-        const parentElement: any = document.getElementById("slideAtacantes")
-        create(parentElement)
+        const parentElement: any = document.getElementById("slide-atacantes")
+        create(parentElement, element)
     }
-    function create(parentElement: any): any {
-        let theLastChild = parentElement.lastChild
-        let newElement = document.createElement("div")
-        newElement.className = 'card-carousel';
-        newElement.appendChild(document.createElement('img')).src = element.url
-        newElement.appendChild(document.createElement('p')).innerText = element.name
-        newElement.appendChild(document.createElement('p')).innerText = `${element.age} anos`
-        parentElement.insertBefore(newElement, theLastChild)
-    }
+}
+
+function create(parentElement: any, jogador: jogadores): void {
+    let theLastChild = parentElement.lastChild
+    let newElement = document.createElement("div")
+    newElement.className = 'card-carousel';
+    newElement.appendChild(document.createElement('img')).src = jogador.url
+    newElement.appendChild(document.createElement('p')).innerText = jogador.name
+    newElement.appendChild(document.createElement('p')).innerText = `${jogador.age} anos`
+    parentElement.insertBefore(newElement, theLastChild)
 }
 
 function loadElementsJogadores(): any {
     loadApiJogadores().then((data: Array<jogadores>) => processApiJogadores(data))
 }
 
-function filterAge() {
+function filterAge(): void {
     let filter: Array<number> = []
     const filter_age_min: any = document.getElementById('age_min')
     const filter_age_max: any = document.getElementById('age_max')
@@ -90,12 +91,12 @@ function filterAge() {
     loadApiJogadores().then((data: Array<jogadores>) => processApiJogadores(data, filter))
 }
 
-function slideMoveRight(id: string) {
+function slideMoveRight(id: string): void {
     const element: any = document.getElementById(id)
     element.scrollLeft += 50;
 }
 
-function slideMoveLeft(id: string) {
+function slideMoveLeft(id: string): void {
     const element: any = document.getElementById(id)
     element.scrollLeft -= 50;
 }
