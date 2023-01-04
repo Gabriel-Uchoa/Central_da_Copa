@@ -19,7 +19,7 @@ async function loadApiJogos(): Promise<any> {
     return result
 }
 
-function processApi(data: Array<jogos>) {
+function processApi(data: Array<jogos>): void {
     data.forEach(element => {
         if (element.timeA == "Inglaterra" || element.timeB == "Inglaterra") {
             createElement(element)
@@ -27,7 +27,7 @@ function processApi(data: Array<jogos>) {
     });
 }
 
-function viewExpand() {
+function viewExpand(): void {
     const divExpand: any = document.getElementById("Classificatória")
     if (btnView.innerText == "Ver Mais") {
         divExpand.style.height = 250 + 'px'
@@ -37,7 +37,7 @@ function viewExpand() {
         btnView.innerText = "Ver Mais"
     }
 }
-function createElement(element: jogos) {
+function createElement(element: jogos): void {
     //refatorar função
     const parentElement: any = document.getElementById(element.fase)
     if (element.fase == "Classificatória") {
